@@ -136,7 +136,7 @@ a.tb-item:hover{color:var(--accent-bri)}
 /* ── Services ── */
 #services{padding:100px 0;position:relative;z-index:1}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:16px}
-.svc-card{background:rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.6);border-radius:var(--r-md);padding:36px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;transform-style:preserve-3d;will-change:transform;transition:box-shadow .15s ease,border-color .15s ease}
+.svc-card{background:rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.6);border-radius:var(--r-md);padding:36px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;will-change:transform;isolation:isolate;transition:box-shadow .15s ease,border-color .15s ease}
 .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--teal));opacity:0;transition:opacity var(--ease)}
 .svc-card:hover::before{opacity:1}
 .svc-card:hover{border-color:rgba(144,238,144,.35);box-shadow:var(--shadow-md)}
@@ -362,7 +362,7 @@ footer{background:#0A1A10;padding:60px 0 28px;border-top:1px solid rgba(255,255,
   #dna-bg{display:none}
 }
 
-.svc-img{display:block;width:calc(100% + 72px);height:168px;object-fit:cover;object-position:center;border-radius:calc(var(--r-md) - 1px) calc(var(--r-md) - 1px) 0 0;margin:-36px -36px 26px -36px;opacity:.95;transition:transform .35s ease,opacity .25s ease}
+.svc-img{display:block;width:calc(100% + 72px);height:168px;object-fit:cover;object-position:center;margin:-36px -36px 26px -36px;opacity:.95;transition:transform .35s ease,opacity .25s ease;border-radius:0}
 .svc-card:hover .svc-img{transform:scale(1.04);opacity:1}
 
 /* ════ ANIMATION LAYER ════ */
